@@ -21,10 +21,6 @@ var data = {
   };
 document.getElementById('rzp-button1').onclick = function(e){
   razorpay.createPayment(data);
-  razorpay.on('payment.success', function(resp) {
-      alert(resp.razorpay_payment_id),
-      alert(resp.razorpay_order_id),
-      alert(resp.razorpay_signature)});
-  razorpay.on('payment.error', function(resp){alert(resp.error.description)});
+ 
 }
 </script>
