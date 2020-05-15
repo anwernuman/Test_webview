@@ -2,15 +2,16 @@
 <script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
 <script type="text/javascript">
 var razorpay = new Razorpay({
-  key: 'rzp_test_Ndzyc39KBH1Jgp',
+  key: 'rzp_live_Nd4cMOpB2WTE5x',
   image: 'https://i.imgur.com/n5tjHFD.png',
   callback_url: 'https://stage-consumer-api.vogo.tech/api/v1/accounts/wallets/deposit-razorpay-verify/?app_redirect_url=http%3A%2F%2Flocalhost%3A3000%2F%23%2FlongTermRental%2Fpayment%3Fredirect%3Dtrue%26redirectAction%3Dltr_rp_payment&user_id=684694&txn_id=953c42c6-b924-4b47-bd65-7c67017c1368&order_id=order_Epk5p3Es3Zji3y&ltr_mode=True',
   redirect:true
 });
 var data = {
-    "order_id":"order_Eq51R6RL2cpsQW",
+    //"order_id":"order_Eq51R6RL2cpsQW",
     "amount":"50000",
     "contact":"+919962656923",
+    "email":"anwernuman@gmail.com",
     "method":"netbanking",
     "bank":"HDFC",
     "notes": 
@@ -22,6 +23,5 @@ var data = {
   };
 document.getElementById('rzp-button1').onclick = function(e){
   razorpay.createPayment(data);
- 
 }
 </script>
